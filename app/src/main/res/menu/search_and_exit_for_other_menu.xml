@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/share_menu"
+        android:icon="@drawable/share_icon"
+        app:showAsAction="ifRoom"
+        android:id="@+id/showShare"/>
+
+    <item
+        android:title="@string/exit_menu"
+        android:icon="@drawable/exit_icon"
+        app:showAsAction="ifRoom"
+        android:id="@+id/showExit"/>
+
+</menu>

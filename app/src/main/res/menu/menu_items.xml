@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/share"
+        tools:ignore="MenuTitle"
+        android:icon="@drawable/share_icon"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/tips"
+        android:title="@string/tips_menu"/>
+
+    <item
+        android:id="@+id/visit_site"
+        android:title="@string/visit_website_menu"/>
+
+    <item
+        android:id="@+id/feedback"
+        android:title="@string/feedback_menu"/>
+
+    <item
+        android:id="@+id/privacyPolicy"
+        android:title="@string/privacy_policy"/>
+
+    <item
+        android:id="@+id/exit"
+        android:title="@string/exit_menu"/>
+</menu>

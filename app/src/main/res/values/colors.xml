@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="flagBarColor">#FF1950</color>
+    <color name="toolBarColor">#FF566F</color>
+    <color name="customViewBg">#FF8F9F</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="numberColor">#e84118</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="storyTitleColor">#3742fa</color>
+    <color name="storyContentDescriptionColor">#9291FF</color>
+</resources>
