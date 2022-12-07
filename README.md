@@ -2,7 +2,7 @@
 
 My another app create for kids, a Story app has 20 wonderful amazing stories 
 
-[![Kwento App Banner](/kwento-app-graphics.png)
+[![Kwento App Banner](kwento-app-graphics.png)
 ]()
 
 Kwento Kids story app 
