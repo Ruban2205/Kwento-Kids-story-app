@@ -2,9 +2,6 @@
 
 My another app create for kids, a Story app has 20 wonderful amazing stories 
 
-[![Kwento App Banner](kwento-app-graphics.png)
-]()
-
 Kwento Kids story app 
 
 This is the free and open source application which can be used for all purpose
