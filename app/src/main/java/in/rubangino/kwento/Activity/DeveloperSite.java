@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import in.rubangino.kwento.BuildConfig;
 import in.rubangino.kwento.R;
 
 public class DeveloperSite extends AppCompatActivity {
@@ -32,10 +33,13 @@ public class DeveloperSite extends AppCompatActivity {
         super.onOptionsItemSelected(item);
 
         if (item.getItemId() == R.id.showShare){
-            Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-            sharingIntent.setType("text/plain");
-            sharingIntent.putExtra(Intent.EXTRA_TEXT,"https://ruban-app-creations.blogspot.com/");
-            startActivity(Intent.createChooser(sharingIntent, "share using..."));
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Hey, This app has amazing stories to entertain your kids. I've recommended you to download this app now: https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
+            sendIntent.setType("text/plain");
+
+            Intent shareIntent = Intent.createChooser(sendIntent, null);
+            startActivity(shareIntent);
 
             return true;
         }
@@ -55,7 +59,7 @@ public class DeveloperSite extends AppCompatActivity {
 
         webView = findViewById(R.id.developerSite);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://ruban-app-creations.blogspot.com/");
+        webView.loadUrl("https://www.rubangino.in/");
 
         //get action bar title
         getSupportActionBar().setTitle("DEVELOPER SITE");

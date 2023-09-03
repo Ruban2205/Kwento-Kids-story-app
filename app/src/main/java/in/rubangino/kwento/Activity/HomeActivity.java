@@ -2,6 +2,7 @@ package in.rubangino.kwento.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -20,6 +21,7 @@ import com.gun0912.tedpermission.TedPermission;
 
 import java.util.ArrayList;
 
+import in.rubangino.kwento.BuildConfig;
 import in.rubangino.kwento.R;
 
 public class HomeActivity extends AppCompatActivity {
@@ -43,10 +45,13 @@ public class HomeActivity extends AppCompatActivity {
         super.onOptionsItemSelected(item);
 
         if (item.getItemId() == R.id.share){
-            Intent sharingIntent = new Intent(Intent.ACTION_SEND);
-            sharingIntent.setType("text/plain");
-            sharingIntent.putExtra(Intent.EXTRA_TEXT,"https://play.google.com/store/apps/dev?id=7866219812027306360");
-            startActivity(Intent.createChooser(sharingIntent, "share using..."));
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "Hey, This app has amazing stories to entertain your kids. I've recommended you to download this app now: https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
+            sendIntent.setType("text/plain");
+
+            Intent shareIntent = Intent.createChooser(sendIntent, null);
+            startActivity(shareIntent);
 
             return true;
         }
@@ -107,8 +112,8 @@ public class HomeActivity extends AppCompatActivity {
             intent.setData(Uri.parse("mailto:"));
             intent.putExtra(Intent.EXTRA_EMAIL, TO_EMAILS);
 
-            intent.putExtra(Intent.EXTRA_SUBJECT, "This is Subject");
-            intent.putExtra(Intent.EXTRA_TEXT, "This is a Text");
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Set your issue as Subject");
+            intent.putExtra(Intent.EXTRA_TEXT, "Elaborate your issue here...");
 
             startActivity(Intent.createChooser(intent, "choose your mail client..."));
 
@@ -151,6 +156,8 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         //Call the String array form strings.xml
         String[] title = getResources().getStringArray(R.array.storyTitles);

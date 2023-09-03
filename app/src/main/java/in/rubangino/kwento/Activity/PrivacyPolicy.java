@@ -34,7 +34,7 @@ public class PrivacyPolicy extends AppCompatActivity {
         if (item.getItemId() == R.id.showShare){
             Intent sharingIntent = new Intent(Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
-            sharingIntent.putExtra(Intent.EXTRA_TEXT,"https://ruban-app-creations.blogspot.com/2020/09/kwento-kids-story-app-privacy-policy.html");
+            sharingIntent.putExtra(Intent.EXTRA_TEXT,"https://ruban-creations.blogspot.com/2020/09/tips-to-reading-stories-with-kwento.html");
             startActivity(Intent.createChooser(sharingIntent, "share using..."));
 
             return true;
@@ -55,7 +55,7 @@ public class PrivacyPolicy extends AppCompatActivity {
 
         webView = findViewById(R.id.privacyPolicyWeb);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://ruban-app-creations.blogspot.com/2020/09/kwento-kids-story-app-privacy-policy.html");
+        webView.loadUrl("https://www.freeprivacypolicy.com/live/92cb787d-67c8-42a3-a4e6-155201d33892");
 
         //get title
         getSupportActionBar().setTitle("PRIVACY POLICY");
