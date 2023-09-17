@@ -11,6 +11,10 @@ Link: https://play.google.com/store/apps/details?id=in.rubangino.kwento
 
 Download my app from the above link and write a review on that. 
 
+## License
+ 
+This repository is licenced under the [MIT LICENSE](/LICENSE). You are free to use, modify, and distribute the code and content within this repository for personal or commercial purposes. However, please provide attribution to the original repository by linking back to it.
+
 ## Contact
 
 [![Website](https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://rubangino.in/)
